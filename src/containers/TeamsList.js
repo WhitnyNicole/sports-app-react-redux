@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
-
+import { connect } from 'react-redux'
+// import { getTeams } from '..redux/actions/teams'
 
 class TeamsList extends Component {
+
+    // componentDidMount() {
+    //     this.props.getTeams()
+    // }
+
     render() {
         return (
             <div>
@@ -12,3 +18,7 @@ class TeamsList extends Component {
 }
 
 export default TeamsList
+// export default connect(
+//     null, 
+//     { getTeams }
+//     )(TeamsList);
