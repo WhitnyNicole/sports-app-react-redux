@@ -1,5 +1,5 @@
 import { createStore } from 'redux'
-import { teamsReducer } from './reducers/teams'
+import teamsReducer from './reducers/teams'
 
 let store = createStore(
     teamsReducer,
