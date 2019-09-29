@@ -1,24 +1,28 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { getTeams } from '..redux/actions/teams'
 
 class TeamsList extends Component {
 
-    // componentDidMount() {
-    //     this.props.getTeams()
-    // }
-
     render() {
+        if (this.props.teams.length == 0) {
+            return <p>Loading...</p>
+        }
         return (
             <div>
                 <h1> Teams List </h1>
+                {this.props.teams.map(team => (
+                    <p>{team.name}</p>
+                ))}
             </div>
-        )
+        )      
     }
 }
 
-export default TeamsList;
-// export default connect(
-//     null, 
-//     { getTeams }
-//     )(TeamsList);
+const mapStateToProps = (state) => {
+    return {
+        teams: state
+    }
+}
+
+// export default TeamsList;
+export default connect(mapStateToProps)(TeamsList);
