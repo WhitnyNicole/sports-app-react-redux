@@ -17,7 +17,7 @@ class TeamsList extends Component {
     }
 }
 
-export default TeamsList
+export default TeamsList;
 // export default connect(
 //     null, 
 //     { getTeams }
